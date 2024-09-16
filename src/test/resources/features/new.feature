@@ -11,3 +11,8 @@ Feature: Subscription Packages
     Then record should created successfully
     And when user try to delete recode
     Then record should be deleted successfully
+
+    @Test
+    Scenario: validate create and delete user from apis
+      Given user should be able to create user from apis
+      And can delete user too from apis

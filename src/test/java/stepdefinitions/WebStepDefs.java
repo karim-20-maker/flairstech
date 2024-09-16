@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import Common.Hooks;
+import apis.APIsTest;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -9,18 +10,23 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.P01HomeScreen;
 import pages.P02DashboardPage;
+import io.cucumber.java.Scenario;
+
+import java.io.IOException;
 
 import static Common.ReadProperties.*;
 
-public class MyStepDefs extends Hooks {
+public class WebStepDefs extends Hooks {
     private P01HomeScreen home;
     private P02DashboardPage dashboard;
 
     @Before
     public void startDriver() {
-        startDriverSession();
-        home = new P01HomeScreen(driver);
-        dashboard = new P02DashboardPage(driver);
+
+            startDriverSession();
+            home = new P01HomeScreen(driver);
+            dashboard = new P02DashboardPage(driver);
+
 
     }
 
@@ -73,4 +79,5 @@ public class MyStepDefs extends Hooks {
         dashboard.validateDeletingSuccessfully();
 
     }
+
 }

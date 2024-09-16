@@ -8,6 +8,8 @@ public class ReadProperties {
     public static final String username = getPropertyFromEnv("username");
     public static final String password = getPropertyFromEnv("password");
     public static final String employeeName = getPropertyFromEnv("employeeName");
+    public static final String APIURL = getPropertyFromEnv("APIURL");
+
 
 
     private static String getPropertyFromEnv(String propertyName) {
